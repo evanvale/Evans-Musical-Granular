@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(starter_clap_plugin)
+project(evans_musical_granular)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -34,19 +34,25 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(clap)
 
 # Create the plugin library
-add_library(starter_clap_plugin SHARED
+add_library(evans_musical_granular SHARED
     plugin.h
     plugin.cpp
     dsp.cpp
     params.cpp
+    utils.cpp
 )
 
 # Link CLAP headers
-target_include_directories(starter_clap_plugin PRIVATE ${clap_SOURCE_DIR}/include)
+target_include_directories(evans_musical_granular PRIVATE ${clap_SOURCE_DIR}/include)
+
+# Add math library for calculations
+if(UNIX AND NOT APPLE)
+    target_link_libraries(evans_musical_granular m)
+endif()
 
 # Set proper library properties for CLAP plugin
-set_target_properties(starter_clap_plugin PROPERTIES
+set_target_properties(evans_musical_granular PROPERTIES
     PREFIX ""
     SUFFIX ".clap"
-    OUTPUT_NAME "EvansPluginTemplate"
+    OUTPUT_NAME "EvansMusicalGranular"
 )
