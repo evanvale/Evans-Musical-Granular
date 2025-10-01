@@ -88,9 +88,10 @@ Copy the `.clap` file to your plugin directory:
 
 ## License
 
-Public domain template - use however you want.
+Public domain. Do whatever you want with this.
 
 ## Credits
 
 All Coding by Claude AI.
+
 Granular synthesis implementation with CLAP plugin architecture and automated build system.
