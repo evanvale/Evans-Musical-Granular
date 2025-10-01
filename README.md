@@ -1,4 +1,4 @@
-# Granular Pitch Shifter
+# Evan's Musical Granular Pitch Shifter
 
 A real-time granular pitch shifter CLAP plugin that turns recent audio into a playable instrument with intelligent harmonic generation. Very early in development right now (it's rough).
 
