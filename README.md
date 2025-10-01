@@ -92,5 +92,5 @@ Public domain template - use however you want.
 
 ## Credits
 
-All Coding by Claude AI
+All Coding by Claude AI.
 Granular synthesis implementation with CLAP plugin architecture and automated build system.
